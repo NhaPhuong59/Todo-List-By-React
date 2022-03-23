@@ -3,7 +3,7 @@ import TaskItem from './TaskItem'
 
 function TaskList({tasks, showInComplete, setTaskStatus, removeTask, setShowInComplete}) {
   return (
-    <>
+    <div>
     <ul className="task-list">
         {tasks
             .filter((task) => showInComplete ? task.status !== 1 : true).map((task) => (
@@ -16,7 +16,7 @@ function TaskList({tasks, showInComplete, setTaskStatus, removeTask, setShowInCo
       </label>
       <input type="checkbox" id="filter" checked={showInComplete} onChange={(e) => setShowInComplete(e.target.checked)}/>
     </div>
-    </>
+    </div>
   )
 }
 
